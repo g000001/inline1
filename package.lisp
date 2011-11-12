@@ -8,8 +8,9 @@
   (:export :defun-inline-self))
 
 (defpackage :root.function.inline1-internal
-  (:use :inline1 :cl :fiveam #+sbcl :sb-cltl2)
+  (:use :inline1 :cl :fiveam)
   (:import-from #+allegro :excl
-                #+(or cmu :scl clisp) :ext
+                #+(or cmu scl clisp) :ext
                 #+ccl :ccl
+                #+sbcl :sb-cltl2
                 :compiler-let))
